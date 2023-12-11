@@ -7,12 +7,12 @@
 }
 
 header {
-    background-color: #0451a5;
-    color: white;
+    background-color: deepskyblue;
+    color: black;
 
 }
 header a {
-    color:white;
+    color:black;
 }
 
 nav {
@@ -36,7 +36,7 @@ nav {
 
 .left-container li, .left-container ul {
     padding: 0 10px;
-    color: white;
+    color: black;
 }
 
 #categories {
@@ -51,7 +51,7 @@ nav {
     color: black;
     position: absolute;
     top: 45px;
-    background-color: #0451a5;
+    background-color: deepskyblue;
     /*TODO cleaner*/
 }
 
@@ -68,5 +68,13 @@ nav {
 }
 
 .right-container a {
-    padding: 0 20px;
+    padding: 10px 20px;
+    margin: 0 7px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+    transition: 200ms;
+}
+.right-container a:hover{
+   box-shadow: 5px 5px 5px;
 }
