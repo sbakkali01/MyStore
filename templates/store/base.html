@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyStore</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/store/base.css' %}">
+</head>
+<body>
+<header>
+    <nav>
+        <label for="#" class="logo">MyStore</label>
+        <ul class="left-container">
+            <li id="categories">
+                <a href="#" >Categories</a>
+                <ul class="submenu">
+                    {% for c in categories %}
+                        <li href="#"><a href="">{{ c.name }} </a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li>
+                <a href="#">Products</a>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+            </li>
+        </ul>
+        <div class="right-container">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </nav>
+
+</header>
+
+
+</body>
+</html>
