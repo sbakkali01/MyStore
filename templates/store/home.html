@@ -12,7 +12,9 @@
         </div>
     </div>
     <div class="all-books-wrapper">
-        book1
+        {% for product in products %}
+            <li>{{ product.title }}</li>
+        {% endfor %}
     </div>
     </div>
 
