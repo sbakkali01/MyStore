@@ -7,8 +7,10 @@
 }
 
 header {
+
     background-color: deepskyblue;
     color: black;
+    position: sticky;
 
 }
 header a {
@@ -58,7 +60,7 @@ nav {
 
 .submenu > li {
     padding: 0 5px;
-    color: white;
+    color: deepskyblue;
 }
 
 
