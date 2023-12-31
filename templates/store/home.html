@@ -6,16 +6,24 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/store/home.css' %}">
 
     <div class="page-wrapper">
-    <div class="content-wrapper">
-        <div id="welcom-text">
-            Welcom to MyStore ! The best place online to find the books you've always wanted !
+        <div class="content-wrapper">
+            <div id="welcome-text">
+                Welcom to MyStore ! The best place online to find the books you've always wanted !
+            </div>
         </div>
-    </div>
-    <div class="all-books-wrapper">
-        {% for product in products %}
-            <li>{{ product.title }}</li>
-        {% endfor %}
-    </div>
+        <div class="all-books-wrapper">
+{#                TODO only let the in stock articles #}
+            {% for product in products %}
+                <div class="book-card">
+{#                TODO Mettre les cards au centre des colonnes + faire rentrer les images bien dans les corners #}
+                    <div class="book-picture-container">
+                        <img class="book-picture"  src="{{ product.image.url }}">
+                    </div>
+{#                    TODO Rendre que le titre cliquable et garder un peu d'espace pour le prix ! #}
+                    <a href="{{ product.get_absolute_url }}" class="book-infos">{{ product.title }} {{ product.price }} €</a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock %}
