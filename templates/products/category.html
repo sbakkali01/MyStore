@@ -1,0 +1,24 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/products/category.css' %}">
+    <div class="category_name">{{ category.name }}</div>
+    <div class="page-wrapper">
+        <div class="all-books-wrapper">
+{#                TODO only let the in stock articles #}
+            {% for product in products %}
+                <div class="book-card">
+{#                TODO Mettre les cards au centre des colonnes + faire rentrer les images bien dans les corners #}
+                    <div class="book-picture-container">
+                        <img class="book-picture"  src="{{ product.image.url }}">
+                    </div>
+{#                    TODO Rendre que le titre cliquable et garder un peu d'espace pour le prix ! #}
+                    <a href="{{ product.get_absolute_url }}" class="book-infos">{{ product.title }} {{ product.price }} €</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

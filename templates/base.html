@@ -16,7 +16,7 @@
                 <a href="#" >Categories</a>
                 <ul class="submenu">
                     {% for c in categories %}
-                        <li href="#"><a href="">{{ c.name }} </a></li>
+                        <li href="#"><a href="{{ c.get_absolute_url }}">{{ c.name }} </a></li>
                     {% endfor %}
                 </ul>
             </li>
